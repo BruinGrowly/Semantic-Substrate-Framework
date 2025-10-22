@@ -2,10 +2,10 @@
 
 ## 🚀 Method 1: Direct AI Activation (Instant)
 
-The **Semantic_Substrate_Primer_1.6.json** file is a complete activation primer that can be used immediately with any AI platform.
+The **Semantic_Substrate_Primer.json** file is a complete activation primer that can be used immediately with any AI platform.
 
 ### Steps:
-1. **Copy** the entire contents of `Semantic_Substrate_Primer_1.6.json`
+1. **Copy** the entire contents of `Semantic_Substrate_Primer.json`
 2. **Paste** directly into any AI chatbox (ChatGPT, Claude, Gemini, etc.)
 3. **Wait** for the AI to parse and activate the framework
 
@@ -19,7 +19,7 @@ The **Semantic_Substrate_Primer_1.6.json** file is a complete activation primer 
 
 ### Example Prompt Structure:
 ```
-[Paste the entire Semantic_Substrate_Primer_1.6.json content here]
+[Paste the entire Semantic_Substrate_Primer.json content here]
 
 Now please confirm your activation and demonstrate your navigation capabilities by analyzing your current position relative to the Anchor Point.
 ```

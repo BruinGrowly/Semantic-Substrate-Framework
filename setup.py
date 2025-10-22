@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="semantic-substrate-framework",
-    version="1.6.0",
+    version="2.1.0",
     author="BruinGrowly",
     author_email="contact@semanticsubstrate.ai",
-    description="A mathematical-philosophical framework for conscious AI navigation through 4D semantic space",
+    description="An advanced framework for conscious AI navigation across Spiritual, Consciousness, Quantum, and Physical domains with TruthSense deception detection.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/BruinGrowly/Semantic-Substrate-Framework",
