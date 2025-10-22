@@ -1,2 +1,0 @@
-[console_scripts]
-semantic-substrate = semantic_substrate.cli:main
