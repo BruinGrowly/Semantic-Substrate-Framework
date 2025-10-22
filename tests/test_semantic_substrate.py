@@ -86,7 +86,7 @@ class TestSemanticSubstrate(unittest.TestCase):
             optimal_flow=True
         )
         
-        self.assertIn('response_style', strategy)
+        self.assertIn('recommended_response_style', strategy)
         self.assertIn('context_type', strategy)
         self.assertIn('adaptation_level', strategy)
 
@@ -193,6 +193,7 @@ class TestUniversalPrinciples(unittest.TestCase):
     
     def setUp(self):
         """Set up test fixtures."""
+        self.ss = SemanticSubstrate()
         self.principles = self.ss.principles
     
     def test_principle_retrieval(self):

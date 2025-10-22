@@ -45,7 +45,7 @@ class PhiGeometry:
         # Dodecahedral anchors (12 points in golden ratio harmony)
         self._dodecahedral_anchors = self._generate_dodecahedral_anchors()
     
-    @lru_cache(maxsize=128)
+    @lru_cache(maxsize=None)
     def fibonacci(self, n: int) -> int:
         """
         Calculate nth Fibonacci number with optimization.
@@ -58,18 +58,17 @@ class PhiGeometry:
         Returns:
             nth Fibonacci number
         """
-        if n in self._fib_cache:
-            return self._fib_cache[n]
+        if n < 0:
+            raise ValueError("Fibonacci input must be a non-negative integer.")
         
-        if n <= self._cache_cutoff:
-            # Standard recursive with caching
-            result = self.fibonacci(n-1) + self.fibonacci(n-2)
-            self._fib_cache[n] = result
-            return result
-        else:
+        if n > self._cache_cutoff:
             # Binet's formula for large n
-            result = int(round(self.PHI**n / math.sqrt(5)))
-            return result
+            return int(round(self.PHI**n / math.sqrt(5)))
+
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
     
     def golden_spiral_distance(self, coord1: Tuple[float, float, float, float], 
                              coord2: Tuple[float, float, float, float]) -> float:
@@ -86,8 +85,8 @@ class PhiGeometry:
             Golden spiral distance
         """
         # Convert to numpy arrays
-        p1 = np.array(coord1)
-        p2 = np.array(coord2)
+        p1 = np.array(coord1 if isinstance(coord1, tuple) else coord1.to_tuple())
+        p2 = np.array(coord2 if isinstance(coord2, tuple) else coord2.to_tuple())
         
         # Calculate angular difference
         euclidean_dist = np.linalg.norm(p2 - p1)
